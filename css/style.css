@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/* Шрифты */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap");
+/*--------*/
+/* Обнуляющий стиль */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  font-family: Lato;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+.ibg img {
+  display: none; }
+
+/*------------------*/
+/* Шапка */
+.header {
+  height: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  background: url("../../img/header/pixel.svg"); }
+  .header .container {
+    height: 90px;
+    background-color: #fff;
+    padding: 37px 0 21px 0;
+    overflow: hidden;
+    z-index: 50; }
+  .header__content {
+    max-width: 980px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 2; }
+  .header__icon {
+    margin: 0 10px 0 0; }
+  .header__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .header__text-top {
+    color: #2a535e;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase; }
+  .header__text-bottom {
+    color: #7a8f95;
+    font-size: 12px; }
+  .header__burger {
+    display: none; }
+  .header__nav {
+    margin-top: 3px;
+    padding: 0 22px 0 0; }
+  .header__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .header__list li {
+      display: inline;
+      margin: 0 0 0 18px; }
+      .header__list li.active:after {
+        content: '';
+        width: 100%;
+        height: 8px;
+        display: block;
+        background-color: #1f987d;
+        position: relative;
+        top: -66px; }
+    .header__list li a {
+      letter-spacing: 0.35px;
+      color: #4d7b87;
+      line-height: 24px;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+      .header__list li a:hover {
+        color: #1f987d; }
+
+/*-------*/
+/* Тело */
+/*------*/
+/* Подвал */
+/*--------*/

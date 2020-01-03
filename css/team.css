@@ -1,0 +1,16 @@
+.green-line {
+    border: none; /* Убираем границу */
+    background-color: #1f987d; /* Цвет линии */
+    color: #1f987d; /* Цвет линии для IE6-7 */
+    height: 1px; /* Толщина линии */
+}
+
+.home-team {
+    /* Style for "Home  /  T" */
+    width: 69px;
+    height: 9px;
+    color: #2a535e;
+    font-family: Lato;
+    font-size: 11px;
+    
+}

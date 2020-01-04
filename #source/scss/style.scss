@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Шрифты */
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
 /*--------*/
@@ -31,10 +30,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 }
-.body {
-	flex: 1 1 auto;
+.body, .article {
+	flex: 1 0 auto;
 }
 /*-----------*/
 
@@ -224,171 +222,79 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 			font-weight: 300;
 			margin: 0 4px 0 0;
 		}
+		@media (max-width: 767px) {
+			.container {
+				display: flex;
+				max-width: 100%;
+				flex-direction: column;
+			}
+			&__left {
+				order: 1;
+			}
+			&__right {
+				order: 0;
+				flex: 0 0 auto;
+			}
+			&__blog-categories {
+				padding-left: 18px;
+			}
+			&__navigation {
+				margin-left: 0;
+			}
+			&__buttons {
+				flex: 1 1 auto;
+			}
+			&__button-nav {
+				flex: 1 1 auto;
+				height: 50px;
+				font-size: 24px;
+			}
+		}
 	}
 }
 /* article.html */
 .article {
-	flex: 1 0 auto;
-}
-/*------*/
-
-/* Подвал */
-@import "footer.scss";
-=======
-/* Шрифты */
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
-/*--------*/
-
-// Переменные //
-$dFount: Lato;
-$max: 980px;
-//------------//
-
-/* Обнуляющий стиль */
-*{padding: 0;margin: 0;border: 0;}
-*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-nav,footer,header,aside{display: block;}
-html,body{font-family:$dFount;height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
-input,button,textarea{font-family:inherit;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a,a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
-.ibg img{display: none;} 
-/*------------------*/
-
-/* Настройки */
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
-.body {
-	flex: 1 1 auto;
-}
-/*-----------*/
-
-/* Шапка */
-@import "header.scss";
-/*-------*/
-  
-/* Тело */
-.body {
-	.menu {
-		margin: 14px 0 1px 0;
-		border-top: 1px solid #A6CDD7;
-		border-bottom: 1px solid #A6CDD7;
-		&__dir {
-			color: #2a535e;
-			max-width: $max;
-			margin: 0 auto;
-			padding: 8px 0;
-			font-size: 11px;
-		}
-		&__link {
-			color: #2a535e;
-		}
-	}
-	.category {
-		background-color: #1f987d;
-		.container {
-			color: #fff;
-			margin: 0 auto;
-			max-width: $max;
-			text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-			font-size: 22px;
-			font-weight: 900;
-			line-height: 22px;
-			font-style: italic;
-			padding: 18px 0 20px 0;
-		}
-		margin: 0 4px 0 0;
-	}
+	padding: 0 0 74px 0;
 	.content {
-
-		display: flex;
+		padding: 23px 0 0 0;
 		max-width: $max;
-		margin: 0 auto 74px auto;
-		padding: 42px 0 0 0;
+		margin: 0 auto;
+		display: flex;
 		&__left {
-			background-color: #fff;
+			flex: 1 1 auto;
 		}
-		&__articles {
-			padding: 0 46px 0 0;
-		}
-		&__article {
-			display: flex;
-			margin: 0 0 42px 0;
-			&:last-child {
-				margin: 0;
-			}
-		}
-		&__rating {
-			flex: 0 0 51px;
-			height: 51px;
-			background-image: url("../../img/blog/01.svg");
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: #ffffff;
-			font-size: 24px;
-			font-weight: 300;
-		}
-		&__info {
-			margin: 0 0 0 22px;
-		}
-		&__date {
-			color: #2a535e;
-			font-size: 12px;
-			font-style: italic;
-			margin: 0 0 7px 0;
-		}
-		&__header {
-			display: inline-block;
-			color: #2a535e;
-			font-size: 24px;
-			font-weight: 700;
-			margin: 0 0 15px 0;
-		}
-		&__image {
-			height: 131px;
-		}
-		&__message {
+		&__text {
+			/* Текст */
 			color: #2a535e;
 			font-size: 14px;
 			font-weight: 300;
 			line-height: 22px;
-			margin: 0 0 32px 0;
+			/* Отступы и другое */
+			padding: 16px 28px 16px 0;
 		}
-		&__button-more {
-			height: 1px;
-			width: 92%;
-			background: linear-gradient(to right, #fff 0, #C3CFD2 100%);
-			position: relative;
+		&__image-text {
+			img {
+				display: block;
+				width: 66%;
+				margin: 0 auto;
+			}
+			p {
+				text-align: center;
+				max-width: 66%;
+				font-style: italic;
+				font-weight: 300;
+				color: #666;
+				line-height: 22px;
+				margin: 5px auto 0 auto;
+			}
 		}
-		&__image-link {
-			position: absolute;
-			right: 0;
-			top: -15px;
-		}
-		&__navigation {}
-		&__button-left {}
-		&__buttons {}
-		&__button-nav {}
-		&__button-right {}
 		&__right {
-			background-color: #fff;
-			flex: 0 0 244px;
-			margin: 0 0 0 21px;
+			background-color: #fff8;
+			flex: 0 0 265px;
+			margin: 16px 0 0 0;
 		}
 		&__blog-categories {
-			padding: 12px 18px;
+			padding: 12px 18px 12px 39px;
 		}
 		&__categories-header {
 			color: #2a535e;
@@ -402,24 +308,49 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 			display: flex;
 			border-bottom: 1px solid #8FCBBE;
 			justify-content: space-between;
+			padding: 0 0 4px 0;
+			margin: 0 0 5px 0;
 		}
-		&__categories-name {
+		&__categories-name a {
 			color: #2a535e;
 			font-size: 14px;
 			font-weight: 300;
 		}
 		&__category-value {
 			color: #fff;
-			width: 19px;
+			width: 20px;
 			height: 20px;
 			background-color: #2a535e;
 			border-radius: 50%;
+			padding: 0 0 2px 0;
 			display: flex;
 			justify-content: center;
-			align-content: center;
+			align-items: center;
 			font-size: 12px;
 			font-weight: 300;
-			line-height: 16px;
+			margin: 0 4px 0 0;
+		}
+		@media (max-width: 767px) {
+			max-width: 100%;
+			flex-direction: column;
+			&__right {
+				flex: 0 0 auto;
+				margin: 40px 0 0 0;
+			}
+			&__blog-categories {
+				padding-left: 18px;
+			}
+			&__navigation {
+				margin-left: 0;
+			}
+			&__buttons {
+				flex: 1 1 auto;
+			}
+			&__button-nav {
+				flex: 1 1 auto;
+				height: 50px;
+				font-size: 24px;
+			}
 		}
 	}
 }
@@ -427,5 +358,4 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 /* Подвал */
 @import "footer.scss";
->>>>>>> 8e7d4cb1ab4bf326f2c21edd1f81da1b8f11dcc2
 /*--------*/

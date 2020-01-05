@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  background: url("../../img/header/pixel.svg"); }
+  background: url("../img/header/pixel.svg"); }
   .header .container {
     height: 90px;
     background-color: #fff;
@@ -250,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex: 0 0 51px;
     flex: 0 0 51px;
     height: 51px;
-    background-image: url("../../img/blog/01.svg");
+    background-image: url("../img/blog/01.svg");
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
